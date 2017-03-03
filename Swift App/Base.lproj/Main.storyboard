@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Web-Xc-Ihz">
-                                <rect key="frame" x="140.5" y="30" width="94" height="21"/>
+                                <rect key="frame" x="141.5" y="30" width="93.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -34,19 +34,37 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hqM-v3-rbF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxK-7C-rjY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxK-7C-rjY">
                                 <rect key="frame" x="158" y="114" width="58" height="30"/>
                                 <state key="normal" title="ME TOO"/>
                                 <connections>
                                     <action selector="buttonTappedTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y67-0X-SbU"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FZ3-me-XNg">
+                                <rect key="frame" x="138" y="170" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="IVc-Wy-559"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jh9-LU-vwb">
+                                <rect key="frame" x="141" y="248" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="FZ3-me-XNg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-1" id="T1U-hN-7eI"/>
                             <constraint firstItem="69B-4R-l8I" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="VLU-lv-2U7"/>
+                            <constraint firstItem="FZ3-me-XNg" firstAttribute="top" secondItem="rxK-7C-rjY" secondAttribute="bottom" constant="26" id="cvb-ou-xe1"/>
                             <constraint firstItem="Web-Xc-Ihz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="77" id="hbR-uv-w88"/>
-                            <constraint firstItem="rxK-7C-rjY" firstAttribute="top" secondItem="69B-4R-l8I" secondAttribute="bottom" constant="60" id="idF-sW-3WW"/>
+                            <constraint firstItem="rxK-7C-rjY" firstAttribute="top" secondItem="69B-4R-l8I" secondAttribute="bottom" constant="14" id="idF-sW-3WW"/>
                             <constraint firstItem="Web-Xc-Ihz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nlE-gB-v9a"/>
                             <constraint firstItem="Web-Xc-Ihz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="rby-a8-lFh"/>
                             <constraint firstItem="rxK-7C-rjY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xWk-oh-GWE"/>
@@ -54,6 +72,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="Text" destination="Jh9-LU-vwb" id="tpj-W6-R2r"/>
+                        <outlet property="Text1" destination="FZ3-me-XNg" id="EGk-4C-pm1"/>
                         <outlet property="theLabel" destination="Web-Xc-Ihz" id="bfl-YG-X4L"/>
                     </connections>
                 </viewController>

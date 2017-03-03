@@ -7,7 +7,7 @@
 //
 
 
-//New comment
+//New comment - Test
 
 
 import UIKit
@@ -15,7 +15,11 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var theLabel: UILabel!
-    var tapCount = 0
+    
+    
+    @IBOutlet weak var Text1: UITextField!
+    @IBOutlet weak var Text: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +29,13 @@ class ViewController: UIViewController {
         
     }
     @IBAction func buttonTapped(_ sender: Any) {
-        theLabel.text = "Hello nooob!"
-        tapCount = tapCount + 1
         
         
-        if tapCount >= 10{
-            theLabel.text = "tittes"
-        }
-    }
+        theLabel.text = "Answer: \(Double(Text1.text!)! + Double(Text.text!)!)"
+       
+        
+        
+            }
 
     @IBAction func buttonTappedTwo(_ sender: Any) {
         theLabel.textColor = UIColor.blue
